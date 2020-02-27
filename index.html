@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Theme Made By SHIBAJYOTI MAJUMDER - No Copyright -->
+  <title>Ramakrishna Mission Vidyalaya Alumni Association</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="logo icon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script language=Javascript>
+    window.onload = function () {
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      }, false);
+      document.addEventListener("keydown", function (e) {
+        //document.onkeydown = function(e) {
+        // "I" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          disabledEvent(e);
+        }
+        // "J" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+          disabledEvent(e);
+        }
+        // "S" key + macOS
+        if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+          disabledEvent(e);
+        }
+        // "U" key
+        if (e.ctrlKey && e.keyCode == 85) {
+          disabledEvent(e);
+        }
+        // "F12" key
+        if (event.keyCode == 123) {
+          disabledEvent(e);
+        }
+      }, false);
+
+      function disabledEvent(e) {
+        if (e.stopPropagation) {
+          e.stopPropagation();
+        } else if (window.event) {
+          window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      overflow-x: hidden !important;
+    }
+
+    .box {
+      /* width: 1200px; */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 15px;
+      margin: 0 auto;
+    }
+
+    .card-members {
+      position: relative;
+      width: 250px;
+      height: 300px;
+      background: #fff;
+      margin: 0 auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    }
+
+    .card-members:before,
+    .card-members:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background: #fff;
+      transition: 0.5s;
+      z-index: -1;
+    }
+
+    .card-members:hover:before {
+      transform: rotate(20deg);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    }
+
+    .card-members:hover:after {
+      transform: rotate(10deg);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    }
+
+    .card-members .imgBx {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: #222;
+      transition: 0.5s;
+      z-index: 1;
+    }
+
+    .card-members:hover .imgBx {
+      bottom: 80px;
+    }
+
+    .card-members .imgBx img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-members .details {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+    }
+
+    .card-members .details h2 {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 20px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .card-members .details h2 span {
+      font-weight: 500;
+      font-size: 13px;
+      color: #f38695;
+      display: block;
+      margin-top: 5px;
+    }
+
+    #associates {
+      padding-top: 50px;
+    }
+
+    /* hey */
+
+    .container {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    .container-fluid {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    #more {
+      display: none;
+    }
+
+    .section-one {
+      background: #fff;
+      position: relative;
+      z-index: 9;
+    }
+
+    .section-three {
+      background: #fff;
+      position: relative;
+    }
+
+    .section-two {
+      position: relative;
+      width: 100%;
+      /* //  height: 600px; */
+    }
+
+    .section-two:before {
+      content: '';
+
+    }
+
+    h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 16px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      padding-bottom: 30px;
+    }
+
+    #about {
+
+      background: #fff;
+      text-align: justify;
+    }
+
+    #aboutheading {
+      font-size: 3em;
+      padding-bottom: 10px;
+    }
+
+    #activitieshead {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+
+    #heading {
+      margin-top: 100px;
+    }
+
+    #TOPPIC {
+      background-image: url("images/Alumni cover PC final.jpg");
+
+      /* Full height */
+      height: 50%;
+      padding-top: 34%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .jumbotron {
+      /* //background-color: #f4511e; */
+      height: 80vh;
+      background-image: url("images/Alumni cover PC final.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+    }
+
+    .carousel-indicators li {
+      border-color: #f4511e;
+    }
+
+    .carousel-indicators li.active {
+      background-color: #f4511e;
+    }
+
+    .item {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .carousel-inner>.item>img {
+      margin: auto;
+    }
+
+    .panel {
+      border: 0px solid #326859;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+      overflow: hidden;
+    }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-image: linear-gradient(#2f594d, #c5d668) !important;
+      padding: 25px;
+      border: 0px solid black;
+      border-radius: 0%;
+
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+
+    .panel-default {
+      border: 0px solid black;
+      outline: none;
+
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      /* // background-color: #CC3333; */
+      background-color: teal;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-nav li a:hover {
+      color: #f4511e !important;
+      background-color: #edeeef !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    #navcontainer {
+      width: 100%;
+    }
+
+    #logohold {
+
+      width: 80px;
+      height: 50px;
+      padding: 0px;
+      float: left;
+    }
+
+    #logo {
+      width: 100%;
+      height: 100%;
+    }
+
+    .imageabout {
+      width: 300px;
+    }
+
+
+    #activities {
+      background: url('images/iq activity snap.jpg') no-repeat;
+      background-size: cover;
+
+      /* //  	background: linear-gradient(white,#f4fffb,#fff);
+      //  text-align: justify; */
+
+    }
+
+    #activitiescard {
+
+      padding: 2%;
+      border: 5px solid linear-gradient(rgba(0, 25, 50, 0.5), rgba(0, 0, 25, 0.5));
+
+    }
+
+    #inquizzitive {
+      background: url('images/iqbck.jpg') no-repeat;
+      background-size: cover;
+
+    }
+
+    #activities {
+      text-align: justify;
+    }
+
+    #inquizzitiveh2 {
+      color: #ffffff;
+      font-size: 3em;
+      padding-bottom: 10px;
+    }
+
+    #inquizzitiveh4 {
+      color: #ffffff;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    #contact {
+      background-color: #fff;
+    }
+
+    #myfooter {
+      background-color: #2f4240;
+    }
+
+    #footertext {
+      color: teal;
+    }
+
+    #googleform {
+      color: #ff9125;
+    }
+
+    #googleform:hover {
+      color: #ff9125;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+
+      #registerbtn {
+        background: #000;
+        opacity: 0.5%;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+
+    }
+
+    @media screen and (max-width: 500px) {
+      .jumbotron {
+        height: 80vh;
+        background-image: url("images/Alumni cover mobile final.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        padding: 100px 25px;
+        font-family: Montserrat, sans-serif;
+
+
+        /* background-color: #f4511e; */
+      }
+
+      #TOPPIC {
+        background-image: url("images/Alumni cover mobile final.jpg");
+
+        /* Full height */
+        height: 50%;
+        padding-top: 124%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 1400px) and (min-height: 750px) and (max-height: 1400px) {
+
+      .jumbotron {
+        /* background-color: #f4511e; */
+        height: 80vh;
+        background-image: url("images/Alumni cover ipad final.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        padding: 100px 25px;
+        font-family: Montserrat, sans-serif;
+      }
+
+      #TOPPIC {
+        background-image: url("images/Alumni cover ipad final.jpg");
+
+        /* Full height */
+        height: 50%;
+        padding-top: 34%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 840px) and (min-width:500px) and (min-height: 300px) and (max-height: 420px) {
+      .jumbotron {
+        /* //background-color: #f4511e; */
+        height: 80vh;
+        background-image: url("images/Alumni cover PC final.jpg");
+        padding-top: 34%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        padding: 100px 25px;
+        font-family: Montserrat, sans-serif;
+      }
+
+      #TOPPIC {
+        background-image: url("images/Alumni cover PC final.jpg");
+        /* Full height */
+        height: 50%;
+        padding-top: 34%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 768px) and (min-width: 0px) {
+      .navbar-nav>li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+
+      #inquizzitiveh4 {
+        color: #ffffff;
+        font-size: 1em;
+        text-align: justify;
+      }
+
+      #inquizzitiveh2 {
+        color: #ffffff;
+        font-size: 2.5em;
+        padding-bottom: 10px;
+
+      }
+
+      #rightcarousel {
+        display: none;
+      }
+
+      #leftcarousel {
+        display: none;
+      }
+
+      .imageabout {
+        height: 250px;
+        width: 250px;
+      }
+
+      .aboutsection {
+        margin-top: -10%;
+      }
+
+      #firstrowgallerycolumn {
+        padding: 0px;
+      }
+
+      #secondrowgallerycolumn {
+        padding: 0px;
+      }
+
+      #thirdrowgallerycolumn {
+        padding: 0px;
+      }
+
+      #graphicscolumn {
+        padding: 0px;
+      }
+
+      #webcolumn {
+        padding: 0px;
+      }
+
+      #contentcolumn {
+        padding: 0px;
+      }
+
+      #webteamcolumn {
+        padding: 0px;
+      }
+    }
+
+    @media (max-width: 950px) and (min-width: 768px) {
+
+      #navcontainer {
+        margin: 0;
+        margin-left: 2%;
+        padding: 0;
+        width: 100%;
+      }
+
+      .navbar-header {
+        float: none;
+        width: 100%;
+      }
+
+      .navbar-toggle {
+        margin-right: 3%;
+      }
+
+      .navbar-left,
+      .navbar-right {
+        float: none !important;
+
+      }
+
+      .navbar-toggle {
+        display: block;
+
+      }
+
+      .navbar-collapse {
+        border: 0;
+        overflow-x: hidden !important;
+
+      }
+
+      .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+      }
+
+      .navbar-collapse.collapse {
+        display: none !important;
+        width: 100%;
+      }
+
+      .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+
+      }
+
+      .navbar-nav>li {
+        float: none;
+      }
+
+      .navbar-nav>li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+
+      .collapse.in {
+        display: block !important;
+
+      }
+
+    }
+
+    #myBtn {
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      background-color: white;
+      color: black;
+      border: 2px solid teal;
+      width: 150px;
+
+    }
+
+    #myBtn:hover {
+      background-color: teal;
+      /* Green */
+      color: white;
+    }
+
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+    #parthagmail {
+      font-size: 0.8em;
+    }
+
+    #subhamgmail {
+      font-size: 0.8em;
+    }
+
+    #shibudagmail {
+      font-size: 0.8em;
+    }
+
+    #sagargmail {
+      font-size: 0.8em;
+    }
+
+    #gallery1 {
+      padding: 2px;
+    }
+
+    #gallery2 {
+      padding: 2px;
+    }
+
+    #gallery3 {
+      padding: 2px;
+    }
+
+    #gallery4 {
+      padding: 2px;
+    }
+
+    #gallery5 {
+      padding: 2px;
+    }
+
+    #gallery6 {
+      padding: 2px;
+    }
+
+    #gallery7 {
+      padding: 2px;
+    }
+
+    #gallery8 {
+      padding: 2px;
+    }
+
+    #gallery9 {
+      padding: 2px;
+    }
+
+    #firstrowgallerycolumn {
+      padding: 1px;
+      width: 150%;
+    }
+
+    #secondrowgallerycolumn {
+      padding: 1px;
+      width: 150%;
+    }
+
+    #thirdrowgallerycolumn {
+      padding: 1px;
+      width: 150%;
+    }
+
+
+    @media (max-width: 425px) {
+
+      #webdeveloper {
+        font-size: 1.7em;
+      }
+
+      #content {
+        font-size: 1.7em;
+      }
+
+      #graphics {
+        font-size: 1.7em;
+      }
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" id="navcontainer">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="images/ALUMNILOGO.jpg" id="logohold"><img id="logo"
+            src="images/ALUMNILOGOFINAL.png"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#activities">ACTIVITIES</a></li>
+          <li><a href="#inq">INQUIZZITIVE</a></li>
+          <li><a href="#associates">MEMBERS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScjiif-X_mCSSN0ulRV8LybCoJYRuchMuL78ml-yA7UKPrygQ/viewform?c=0&w=1">REGISTER</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-one">
+    <!-- <div class="jumbotron text-center">
+    </div> -->
+    <div id="TOPPIC" class="container-fluid">
+    </div>
+
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+      <div class="row animatedParent">
+        <div class="col-sm-4">
+          <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+          <div class="alumniaboutlogo animated growIn">
+            <img src="images/ABOUT.jpg" class="img-responsive imageabout">
+          </div>
+        </div>
+        <div class="col-sm-8 aboutsection">
+          <br>
+          <h4><b>Ramakrishna Mission Vidyalaya Alumni Association</b> - A government registered non profit association
+            comprising solely of the alumnus of Ramakrishna Mission Vidyalaya, Viveknagar with its prime objective to
+            reach out the ones in the society who need the most of our helping hands. We tend to carry forward the
+            teachings of Swamiji, Thakur and Maa in the form of our social activities all throughout the year with our
+            very limited resources. One of the prime and prestigious events organised by the association is
+            <b>INQUIZZITIVE</b>, which has become a brand in itself. The longest running and the highest attended quiz
+            show are some of its attributes that it carries and most importantly by every year the bar is set a level or
+            two higher.</p>
+            <p>
+              The association doesn’t limit its reach and responsibility for the society within a quiz show only, which
+              makes it the association organising voluntary blood donation camps, blanket distribution camps, flood
+              relief activities and many more all throughout the year.
+            </p>
+          </h4>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="activities" class="container-fluid">
+      <div class="row animatedParent">
+        <div class="col-sm-6 animated fadeIn">
+          <div class="w3-content w3-section" style="max-width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic1.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic2.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic3.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic4.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic5.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic6.jpg" style="width:100%;">
+            <img class="mySlides w3-animate-fading" src="images/pic7.jpg" style="width:100%;">
+          </div>
+        </div>
+        <div class="col-sm-6 animated fadeInRightShort">
+
+
+          <h2 id="activitieshead">Activities</h2>
+          <h4>We in our alumni association mark our onset being an alumnus by organising a chain of social service
+            events, the very year we become a part of it, i.e. the year we pass our twelfth board exams. By these
+            activities, every batch gets itself accustomed with the alumni’s functioning and also marks the beginning of
+            that year’s INQUIZZITIVE.<br><br>Here are some of the social service activities organised by Ramakrishna
+            Mission Vidyalaya Alumni Association, headed by the particular batches:</h4>
+          <p><strong>BATCH 2005-2015</strong><br>Chennai Flood Relief Fund Collection- The students worked day and
+            night, roaming here and there asking for a helping hand from anyone and everyone. From friends to family,
+            from teachers to guardians and from people they know to complete random strangers. They did their bit to
+            raise an amount which was directly initiated to help the flood victims.</p>
+          <span id="dots">........ <br></span>
+          <span id="more">
+
+            <p><strong>BATCH 2006-2016:</strong> <br> 1) Blood Donation Camp: A blood donation camp was organised on the
+              25th day of December 2016, marked by the presence of the then Hon’ble Chief Minister and other dignitaries
+              as well.
+              A good number of blood donors, comprising of both boys and girls and young and middle aged had donated 58
+              units of blood.<br><br>
+
+              2) Blanket Distribution: 60 pieces of blankets and quilts were being distributed by the students to the
+              road side dwellers and destitute that too at the brisk of night, just where they sleep. The happiness
+              encountered on their eyes after getting a token of warmth and love in that cold winter night that too all
+              of a sudden was something that was above any human feeling, known to us.
+              This act was one highly appreciated, since it was directly targeted to the ones who needed it the most
+              that’s the ones who don’t have a place to lay their heads and not a cloth to cover their bodies.<br><br>
+
+              3) Tripura Flood Relief Activities: It was the month of June, when Tripura saw one of the worst floods of
+              the recent times. Sub divisions like Kailashahar, Sadar and Khowai were the worst hit. Kailashahar
+              specifically, was the worst of all and NDRF teams were being deployed over there keeping in mind the
+              situations.
+              The students strived forward with basic food items like jaggery, ORS, banana, chocolates, stuffed rice,
+              Dal, Rice, Biscuit packets, Bread pieces, packaged mineral water with their self contribution and donation
+              from a huge number of people from all over the state and outside as well.
+              In Sadar sub division only, five camps were covered in the first day which stood up to serving around 800
+              and in Kailashahar, we could only cover three camps and the number of persons we served were around 3600.
+              The situation at Kailashahar was tremendously bad and the connectivity issues made it worse. This activity
+              was the need of the hour and was highly appreciated as well by everyone.
+            </p>
+
+
+            <p><strong>BATCH 2007-2017:</strong> <br> 1) Blood Donation Camp: A blood donation camp was organised on the
+              24th December 2017, marked by the presence of the Secretary of Ramakrishna Math & Mission, Rev. Swami
+              Hitakamananda ji Maharaj and other dignitaries as well.
+              A good number of blood donors, comprising of both boys and girls and young and middle aged had donated
+              about 30 units of blood.<br><br>
+
+              <!-- 2) Kerala Flood Relief Fund Donation -->
+            </p>
+          </span>
+          <button onclick="readmoreactivities()" id="myBtn" class="btn btn-sm">Read more</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="inq">
+    <section class="section-two">
+      <div class="row animatedParent">
+        <div class="container-fluid bg-grey">
+          <div class="col-sm-12">
+            <h3 class="text-center animated growIn slower"><b>RELIVING THE MOMENTS</b></h3>
+            <!--
+       <div class="w3-content w3-section" style="max-width:95%">
+  <img class="mySlidess" src="images/iq galllery 3.jpg" style="width:100%">
+  <img class="mySlidess" src="images/iq galllery 2.jpg" style="width:100%">
+  <img class="mySlidess" src="images/iq galllery 1.jpg" style="width:100%">
+  </div>
+-->
+            <div class="row" id="firstrowgallery">
+              <div class="container-fluid animated growIn slower" style="margin-bottom: 0px; padding: 0px;">
+                <div class="col-lg-1 col-sm-12"></div>
+                <div class="col-lg-10 col-sm-12">
+
+                  <div class="row">
+                    <div class="container-fluid animated bounceIn" id="firstrowgallerycolumn">
+
+                      <a href="images/gallery1.jpg">
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="gallery1">
+                          <img src="images/gallery1.jpg" style="width:100%">
+                        </div>
+                      </a>
+
+                      <a href="images/gallery2.jpg">
+                        <div class="col-lg-4 col-md-6 col-sm-6  col-xs-6" id="gallery2">
+                          <img src="images/gallery2.jpg" style="width:100%">
+                        </div>
+                      </a>
+
+                      <a href="images/gallery3.jpg">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="gallery3">
+                          <img src="images/gallery3.jpg" style="width:100%">
+                        </div>
+                      </a>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-1 col-sm-12"></div>
+              </div>
+            </div>
+
+            <div class="row" id="secondrowgallery">
+              <div class="container-fluid animated growIn slower" style="margin-top: 0px; padding: 0px;">
+                <div class="col-lg-1 col-sm-12"></div>
+                <div class="col-lg-10 col-sm-12">
+
+                  <div class="row">
+                    <div class="container-fluid" id="secondrowgallerycolumn">
+
+                      <a href="images/gallery4.jpg">
+                        <div class="col-lg-4 col-md-12 col-sm-12  col-xs-12" id="gallery4">
+                          <img src="images/gallery4.jpg" style="width:100%">
+                        </div>
+                      </a>
+                      <a href="images/gallery5.jpg">
+                        <div class="col-lg-4 col-md-6 col-sm-6  col-xs-6" id="gallery5">
+                          <img src="images/gallery5.jpg" style="width:100%">
+                        </div>
+                      </a>
+
+                      <a href="images/gallery7.jpg">
+                        <div class="col-lg-4 col-md-6 col-sm-6  col-xs-6" id="gallery6">
+                          <img src="images/gallery7.jpg" style="width:100%">
+                        </div>
+                      </a>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-1 col-sm-12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-three">
+      <div id="inq">
+        <div id="inquizzitive" class="container-fluid animatedParent">
+          <div class="row">
+            <div class="col-sm-12 animated fadeIn">
+              <h2 id="inquizzitiveh2">Inquizzitive</h2>
+              <h4 id="inquizzitiveh4"><b>INQUIZZITIVE</b>– The story deals back to 2000, when a group of young boys who
+                were recently school pass outs felt the need of an open quiz show in the state to uplift the quizzing
+                circuit of the state, since back at that time quizzing in Tripura was not that popularised even after
+                the efforts of many eminent personalities. So, they came up with this brilliant format of open quizzing
+                which was set and organised in such a way that anyone and everyone could participate and that too for
+                free.</p>
+                <p>
+                  The biggest issue the first Inquizzitive team faced was of monetary restrictions and lack of resources
+                  but their tremendous will power and goal oriented mentality fought against all the odds and made
+                  INQUIZZITIVE 1 come out with flying colours. The first INQUIZZITIVE was really special and the team
+                  members remain to be the true protagonists of the journey we are still going through, the vision that
+                  keeps us strive forward and the legacy that every Ramakrishna Mission Vidyalaya student vows to carry
+                  forward.
+                </p>
+                <p>
+                  Inquizzitive had a very humble beginning, as a very low budget show when it started. Since, the team
+                  members always believed that in the city many quizzes will come and go with high end budgets but
+                  INQUIZZITIVE will stand on its own in terms of quizzing standard and questions asked. So, till date we
+                  focus more on the overall quizzing experience, we deliver rather than the prizes we offer.
+                </p>
+                <p>
+                  Even though Inquizzitive is organised by a group of first year college students with nil experience in
+                  event management or quiz organising as a whole but with the able guidance of the seniors from the
+                  Alumni, they every year put up a quiz show of national standards which proudly makes INQUIZZITIVE, the
+                  longest running quiz show on one hand and the highest attended programme of the state on the other.
+                </p>
+                <p>
+                  From a budget of 700 INR to almost 4.5 lakhs INR, from winners’ prizes from flower bouquets to high
+                  end phones and tablets, from a handful of audience to 3700 people attending the show and another 1800
+                  watching the live telecast, from a Ramakrishna Mission Vidyalaya Alumni event to a calendar event for
+                  every resident of Agartala, which they feel like their very own event and from a distant vision to
+                  this ground reality where we proudly claim, “Yes, we are INQUIZZITIVE, we all are.”
+                </p>
+                <p>
+                  <I>~Team INQUIZZITIVE (2000 onwards)</I>
+                </p>
+
+              </h4>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div id="associates">
+    <h1 class="text-center" style="font-size: 20px;">Web Team</h1>
+    <hr style="  border : 0;
+height: 1px; 
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(165, 62, 62, 0.15), rgba(0, 0, 0, 0)); ">
+    <div class="box">
+      <div class="card-members">
+        <div class="imgBx">
+          <img src="images/photo-Partha 2.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Partha Pratim Dey<br><span>Graphics Designer</span></h2>
+        </div>
+      </div>
+
+      <div class="card-members">
+        <div class="imgBx">
+          <img src="images/photo-Subham da 2.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Subham Saha<br><span>Web Developer</span></h2>
+        </div>
+      </div>
+
+      <div class="card-members">
+        <div class="imgBx">
+          <img src="images/photo-Sagar datta 2.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Sagar Datta Majumdar<br><span>Content Writer</span></h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+
+
+  <div id="contact" class="container-fluid animatedParent">
+
+    <div class="row">
+      <div class="col-sm-4 animated fadeInLeft">
+        <h1 class="text-center">CONTACT</h1>
+        <hr style="  border : 0;
+  height: 1px; 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); ">
+        <p class="text-center" style="padding-bottom: 30px; ">Contact us and we will get back to you.
+        </p>
+        <p class="text-center"><span class="glyphicon glyphicon-phone"></span>+91 8787301120</p>
+        <p class="text-center"><span class="glyphicon glyphicon-envelope"></span>alumnirkmv@gmail.com</p>
+        <p class="text-center"><a href="https://www.facebook.com/RkmvAlumniAssociation/" class="fa fa-facebook-square">
+            Ramakrishna Mission Vidyalaya, Viveknagar - Alumni Association</a></p>
+        <p>
+          <span> Account Details :</span>
+          <br> <span style="font-weight:500;">
+            RAMAKRISHNA MISSION VIDYALAYA ALUMNI ASS
+          </span>
+          <br> A/C NO : 32374845945
+          <br> IFSC Code : SBIN0005559
+        </p>
+      </div>
+      <div class="col-sm-8 animated fadeInRight">
+        <iframe style="height:400px;width:100%;border:2px solid #f6f6f6;" class="embed-responsive-item"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.113489266571!2d91.2773551143958!3d23.77897268457532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f4a32c20afd1%3A0x33c9bb0059a2c45c!2sRamakrishna%20Mission%20Vidyalaya!5e0!3m2!1sen!2sin!4v1573979357054!5m2!1sen!2sin"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+      </div>
+    </div>
+    <br>
+
+    <div class="animatedParent text-center">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up animated growIn"></span>
+      </a>
+      <p id="footertext" class="animated growIn">Members Registration <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScjiif-X_mCSSN0ulRV8LybCoJYRuchMuL78ml-yA7UKPrygQ/viewform?c=0&w=1"
+          title="Visit Designer" id="googleform">Google form link</a></p>
+    </div>
+
+
+  </div>
+
+  </section>
+
+
+  <script type="text/javascript" src="js/css3-animate-it.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+
+    function readmoreactivities() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+    /*
+    function readmoregallery() {
+      var dots = document.getElementById("dotsgallery");
+      var moreText = document.getElementById("moregalley");
+      var spanText = document.getElementById("spangallery");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        element.className = element.className.replace(/\bglyphicon glyphicon-chevron-down\b/g, "glyphicon glyphicon-chevron-up");
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        spanText.classList.remove("glyphicon glyphicon-chevron-down");
+        spanText.classList.add("glyphicon glyphicon-chevron-up");
+        moreText.style.display = "block";
+      }
+    }
+    */
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 5000);
+    }
+  </script>
+
+</body>
+
+</html>
